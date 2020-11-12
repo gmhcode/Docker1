@@ -6,6 +6,9 @@ COPY . .
 
 RUN go get -d -v ./...
 RUN go install -v ./...
+RUN go get github.com/joho/godotenv
+RUN go get -u gorm.io/gorm
+RUN go get -u gorm.io/driver/mysql
 
 RUN go get github.com/githubnemo/CompileDaemon
 
